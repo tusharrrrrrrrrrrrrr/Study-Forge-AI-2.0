@@ -1,3 +1,12 @@
+---
+title: StudyForge AI Backend
+emoji: 📚
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+---
+
 <div align="center">
   <h1>📚 StudyForge AI</h1>
   <p><strong>Your Ultimate AI-Powered Study Companion</strong></p>
