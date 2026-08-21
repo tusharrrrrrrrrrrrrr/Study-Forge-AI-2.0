@@ -8,6 +8,11 @@
 
 <br />
 
+> [!NOTE]  
+> **🟢 Deployment Status:** This project is completely developed and has been successfully deployed! The frontend is hosted on **Vercel** and the backend is hosted on **Hugging Face Spaces**. Because the backend relies on free-tier cloud resources, the server may automatically "pause" or go to sleep after periods of inactivity. If the app fails to fetch data or log you in, the backend is likely sleeping.
+
+<br />
+
 ## 🌟 The Vision
 
 Learning from static PDFs is a thing of the past. **StudyForge AI** acts as your personal tutor, extracting knowledge from your documents and engaging you through intelligent Q&A, adaptive flashcards, instantly graded quizzes, and visual concept mapping. 
