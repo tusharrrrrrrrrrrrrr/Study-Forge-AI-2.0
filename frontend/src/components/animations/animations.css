@@ -1,0 +1,126 @@
+/* ─── Rate Limit Error Animation (Robot Bitten by Book) ─── */
+.rate-limit-error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  background: var(--bg-card);
+  border: 1px dashed rgba(239, 68, 68, 0.4);
+  border-radius: var(--radius-lg);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.robot-bitten-animation {
+  position: relative;
+  font-size: 4rem;
+  height: 120px;
+  width: 120px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scared-robot {
+  position: absolute;
+  z-index: 1;
+  animation: shake 0.5s infinite;
+}
+
+.book-jaw {
+  position: absolute;
+  font-size: 3rem;
+  z-index: 2;
+  transition: transform 0.2s;
+}
+
+.top-jaw {
+  top: -10px;
+  transform-origin: bottom center;
+  animation: biteTop 1s infinite alternate;
+}
+
+.bottom-jaw {
+  bottom: -10px;
+  transform-origin: top center;
+  animation: biteBottom 1s infinite alternate;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg) scale(0.9); }
+  25% { transform: translate(-1px, -2px) rotate(-5deg) scale(0.9); }
+  50% { transform: translate(-3px, 0px) rotate(5deg) scale(0.9); }
+  75% { transform: translate(3px, 2px) rotate(0deg) scale(0.9); }
+  100% { transform: translate(1px, -1px) rotate(0deg) scale(0.9); }
+}
+
+@keyframes biteTop {
+  0% { transform: translateY(-20px) rotate(-20deg); }
+  100% { transform: translateY(15px) rotate(10deg); }
+}
+
+@keyframes biteBottom {
+  0% { transform: translateY(20px) rotate(20deg); }
+  100% { transform: translateY(-15px) rotate(-10deg); }
+}
+
+/* ─── Upload Animation (Tree Growing from Book) ─── */
+.tree-book-animation {
+  position: relative;
+  height: 120px;
+  width: 120px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.book-soil {
+  font-size: 3rem;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  animation: floatBook 3s ease-in-out infinite;
+}
+
+.tree-grow {
+  font-size: 3.5rem;
+  position: absolute;
+  bottom: 30px;
+  z-index: 1;
+  transform-origin: bottom center;
+  animation: growTree 4s infinite;
+}
+
+.tree-sprout {
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 35px;
+  z-index: 1;
+  opacity: 0;
+  transform-origin: bottom center;
+  animation: showSprout 4s infinite;
+}
+
+@keyframes floatBook {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes showSprout {
+  0% { opacity: 0; transform: scale(0) translateY(10px); }
+  10% { opacity: 1; transform: scale(1) translateY(0); }
+  30% { opacity: 0; transform: scale(1.5) translateY(-10px); }
+  100% { opacity: 0; }
+}
+
+@keyframes growTree {
+  0%, 25% { transform: scale(0) translateY(20px); opacity: 0; }
+  35% { transform: scale(0.5) translateY(10px); opacity: 1; }
+  60%, 90% { transform: scale(1) translateY(0); opacity: 1; }
+  100% { transform: scale(0) translateY(20px); opacity: 0; }
+}
